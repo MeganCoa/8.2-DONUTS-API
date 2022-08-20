@@ -1,0 +1,6 @@
+package co.grandcircus.APIOne.Models;
+
+public class DonutsResponse {
+	private Integer count;;
+	private Results[] results; 
+}

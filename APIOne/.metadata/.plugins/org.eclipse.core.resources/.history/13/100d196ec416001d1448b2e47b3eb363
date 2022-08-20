@@ -1,0 +1,8 @@
+package co.grandcircus.APIOne.Models;
+
+import java.util.List;
+
+public class DonutsResponse {
+	
+	private List<Donut> results;
+}

@@ -1,0 +1,22 @@
+package co.grandcircus.APIOne.API;
+
+import org.springframework.stereotype.Service;
+import org.springframework.web.client.RestTemplate;
+
+import co.grandcircus.APIOne.Models.DonutsResponse;
+import co.grandcircus.APIOne.Models.Results;
+
+@Service
+public class DonutApiService {
+
+	private RestTemplate restTemplate = new RestTemplate();
+	
+	public DonutsResponse getAllDonuts() {
+		
+		String url = "https://grandcircusco.github.io/demo-apis/donuts.json";
+		
+		DonutsResponse response =
+				restTemlate.getForObject(url,Results.class );
+		
+	}
+}

@@ -1,0 +1,12 @@
+package co.grandcircus.APIOne.Models;
+
+public class Results {
+	
+	private Integer id;
+	private String ref;
+	private String name;
+	private Integer calories; 
+	private List<String> extras;
+	
+	
+}

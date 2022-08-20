@@ -1,0 +1,22 @@
+package co.grandcircus.APIOne.Models;
+
+public class DonutsResponse {
+	//private Integer count;;
+	private Results[] results;
+	public Integer getCount() {
+		return count;
+	}
+	/
+	public Results[] getResults() {
+		return results;
+	}
+	public void setResults(Results[] results) {
+		this.results = results;
+	}
+	public DonutsResponse(Integer count, Results[] results) {
+		super();
+		//this.count = count;
+		this.results = results;
+	} 
+	
+}

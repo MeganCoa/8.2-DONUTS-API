@@ -1,0 +1,34 @@
+package co.grandcircus.APIOne.API;
+
+import java.util.List;
+
+import org.springframework.stereotype.Service;
+import org.springframework.web.client.RestTemplate;
+
+import co.grandcircus.APIOne.Models.DonutsResponse;
+import co.grandcircus.APIOne.Models.Donut;
+
+@Service
+public class DonutApiService {
+
+	private RestTemplate request = new RestTemplate();
+	
+	public Donut getAllDonuts() {
+	
+		String url = "https://grandcircusco.github.io/demo-apis/donuts.json";
+		
+		Donut response =
+				request.getForObject(url,Donut.class);
+		return response;
+		  
+	}
+	public Donut getDonutName(int donut) {
+		
+		String url = "https://grandcircusco.github.io/demo-apis/donuts/{donut}.json";
+		
+		Donut response =
+				request.getForObject(url,Donut.class,donut);
+		return response;
+		  
+	}
+}

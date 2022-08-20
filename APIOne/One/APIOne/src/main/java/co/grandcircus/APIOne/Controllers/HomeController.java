@@ -1,0 +1,32 @@
+package co.grandcircus.APIOne.Controllers;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+
+import co.grandcircus.APIOne.OneRepository;
+import co.grandcircus.APIOne.API.DonutApiService;
+
+@Controller
+public class HomeController {
+	
+	@Autowired
+	private OneRepository repo;
+	@Autowired
+	private DonutApiService service;
+
+	@RequestMapping("/")
+	public String homepage(Model model) {
+		model.addAttribute("donuts", service.getAllDonuts());
+		return "index";
+	}
+	@RequestMapping("/donut-deets")
+	public String donutDeets(Model model,
+			@RequestParam Integer id) {
+		model.addAttribute("donut", service.getDonutById(id));
+		return "donut-deets";
+	}
+	
+}

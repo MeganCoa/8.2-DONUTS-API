@@ -1,0 +1,7 @@
+package co.grandcircus.APIOne.Controllers;
+
+@Controller
+public class HomeController {
+
+	
+}

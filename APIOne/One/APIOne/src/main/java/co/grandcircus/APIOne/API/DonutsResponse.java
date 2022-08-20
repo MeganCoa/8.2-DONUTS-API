@@ -1,0 +1,17 @@
+package co.grandcircus.APIOne.API;
+
+import java.util.List;
+
+import co.grandcircus.APIOne.Models.Donut;
+
+public class DonutsResponse {
+	
+	private List<Donut> results;
+	public List<Donut> getResults(){
+		return results;
+	}
+	public void setResult(List<Donut> results) {
+		this.results = results;
+	}
+	
+}

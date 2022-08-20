@@ -1,0 +1,18 @@
+package co.grandcircus.APIOne.Models;
+
+public class DonutsResponse {
+	private Results[] results;
+
+	public Results[] getResults() {
+		return results;
+	}
+	public void setResults(Results[] results) {
+		this.results = results;
+	}
+	public DonutsResponse\
+	\ Results[] results) {
+	
+		this.results = results;
+	} 
+	
+}
